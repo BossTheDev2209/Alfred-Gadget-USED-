@@ -9,31 +9,52 @@
     <link rel="stylesheet" href="CSS-component/product.css">
     <link rel="stylesheet" href="CSS-component/product-hover.css">
     <link rel="stylesheet" href="CSS-component/footer.css">
+    <link rel="stylesheet" href="CSS-component/scrollbar.css">
 </head>
 <body>
-    <!------------------------- แถบ header ------------------------->
 
-    <header class="navbar"> 
-    <!--Logo-->
-        <div class="navbar-logo">
-            <img src="Icon/layout-grid.png" class="logo">
-            <span class="subtext">Alfred Gadget</span>
-        </div>
+<!-- Top Bar -->
+<div class="topbar">
+  <div class="topbar-left">
+    <img src="Icon/phone.png" alt="phone" class="topbar-icon">
+    <a href="#" class="topbar-info">+99 9999 9999</a>
+    <img src="Icon/speech.png" alt="mail" class="topbar-icon">
+    <a href="#" class="topbar-info">support@alfredgadget.com</a>
+  </div>
+</div>
 
-    <!--Menu-->
-        <nav class="navbar-menu">
-            <a href="#">Collection</a>
-            <a href="#">New In</a>
-            <a href="#">About Us</a>
-            <a href="#">Sustainability</a>
-        </nav>
+<!-- Header -->
+<header class="navbar">
+  <div class="navbar-top">
+    <!-- Logo -->
+    <div class="navbar-logo">
+      <img src="Icon/Alfred Gadget.png" class="logo" alt="logo" width="115px" height="100px">
+    </div>
 
-    <!--Icon-->
-        <div class="navbar-icons">
-            <img src="Icon/user-round.png" class="logo">
-            <img src="Icon/heart.png" class="logo">
-            <img src="Icon/shopping-basket.png" class="logo">
-        </div>
+    <!-- Search + Menu -->
+    <div class="navbar-center">
+      <div class="navbar-search">
+        <input type="text" placeholder="Searching...">
+        <button>
+          <img src="Icon/search.png" alt="search">
+        </button>
+      </div>
+      <nav class="navbar-menu">
+        <a href="#">Main</a>
+        <a href="#">Collection</a>
+        <a href="#">New In</a>
+        <a href="#">About Us</a>
+        <a href="#">Sustainability</a>
+      </nav>
+    </div>
+
+    <!-- Icons -->
+    <div class="navbar-icons">
+      <img src="Icon/user-round.png" class="icon" alt="user">
+      <img src="Icon/heart.png" class="icon" alt="heart">
+      <img src="Icon/shopping-basket.png" class="icon" alt="cart">
+    </div>
+  </div>
 </header>
 
 <!-- Browse Section -->
@@ -219,9 +240,9 @@
     <div class="footer-col">
       <h4>Follow Us</h4>
       <div class="social-icons">
-        <a href="#">🌐</a>
-        <a href="#">📸</a>
-        <a href="#">🐦</a>
+        <a href="#"><img src="Icon/instagram.png" alt=""></a>
+        <a href="#"><img src="Icon/linkedin-icon.png" alt="" width="26px" height="26px"></a>
+        <a href="#"><img src="Icon/twitter.png" alt="" width="26px" height="26px"></a>
       </div>
     </div>
   </div>

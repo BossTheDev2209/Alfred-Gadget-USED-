@@ -40,7 +40,7 @@
 
 .pr-card:hover{
     transform: translateY(-5px);
-    box-shadow: 0 6px 15px rgba(10, 92, 147, 0.284);
+    box-shadow: 0 6px 15px #0055ff86;
 }
 
 /*Image*/
@@ -74,7 +74,7 @@
     position: absolute;
     top: 10px;
     right: 10px;
-    background: rgba(255,255,255,0.9);
+    background: rgba(63, 63, 63, 0.9);
     border: none;
     border-radius: 50%;
     width: 36px;
@@ -88,7 +88,7 @@
 }
 
 .fav-btn:hover{
-    background-color: #ffcc00;
+    background-color: #ff0044;
 }
 
 /*Pr name*/
@@ -132,7 +132,7 @@
     font-size: 0.95rem;
 }
 .tag{
-    background: #ffb84d;
+    background: #00ca7d;
     color: #fff;
     padding: 4px 10px;
     border-radius: 20px;

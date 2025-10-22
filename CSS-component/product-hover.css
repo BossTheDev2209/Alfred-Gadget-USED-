@@ -1,18 +1,18 @@
 
 .pr-card:hover h3 {
-  color: #0087e2;                    
+  color: #0055ff;                    
   transform: translateY(-2px);   
   transition: transform 0.2s ease, color 0.2s ease;
 }
 
 .pr-card:hover .price {
-  color: #0c9921;                    
+  color: #0055ff;                    
   transform: scale(1.1);         
   transition: transform 0.2s ease, color 0.2s ease;
 }
 
 .pr-card:hover .tag {
-  background: #ffbb00;          
+  background: #0055ff;          
   transform: scale(1.1);          
   transition: transform 0.2s ease, background 0.2s ease;
 }

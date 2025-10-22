@@ -1,0 +1,26 @@
+/* Scrollbar auto-hide */
+html {
+  overflow-y: auto;                  /* ให้เลื่อนหน้าได้ */
+  scrollbar-width: thin;            /* Firefox — ทำให้บาง */
+  scrollbar-color: rgba(0, 0, 0, 0.3) transparent;
+}
+
+/* Chrome, Edge, Safari */
+::-webkit-scrollbar {
+  width: 8px;                       /* ความกว้างของ scrollbar */
+}
+
+::-webkit-scrollbar-track {
+  background: transparent;          /* พื้นหลังโปร่งใส */
+}
+
+::-webkit-scrollbar-thumb {
+  background-color: rgba(0, 0, 0, 0.35);
+  border-radius: 4px;
+  opacity: 0;
+  transition: opacity 0.3s ease;
+}
+
+html:hover::-webkit-scrollbar-thumb {
+  opacity: 1;                       /* โชว์ตอนเอาเมาส์ไปใกล้ */
+}
