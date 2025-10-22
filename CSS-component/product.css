@@ -131,10 +131,31 @@
     font-weight: 600;
     font-size: 0.95rem;
 }
-.tag{
-    background: #00ca7d;
-    color: #fff;
-    padding: 4px 10px;
-    border-radius: 20px;
-    font-size: 0.8rem;
+.tag {
+  position: absolute;
+  top: 10px;
+  left: 10px;
+  background: #00ca7d;
+  color: #fff;
+  padding: 4px 10px;
+  border-radius: 20px;
+  font-size: 0.8rem;
+  font-weight: 500;
+  z-index: 2;
+}
+
+.buy-btn {
+  background: #00ca7d;
+  color: #fff;
+  border: none;
+  padding: 6px 16px;
+  border-radius: 20px;
+  font-size: 0.85rem;
+  cursor: pointer;
+  transition: background 0.3s ease, transform 0.2s ease;
+}
+
+.buy-btn:hover {
+  background: #009b60;
+  transform: scale(1.25);
 }
