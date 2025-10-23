@@ -69,3 +69,71 @@
     color: var(--subtext);
     font-size: 0.85rem;
 }
+
+/* tablet responsive */
+@media (max-width: 992px) {
+  .footer-container {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 40px;
+    padding: 0 30px;
+  }
+
+  .footer-col h4,
+  .footer-col p {
+    font-size: 0.95rem;
+  }
+
+  .footer-logo {
+    font-size: 1.3rem;
+  }
+
+  .social-icons a img {
+    width: 24px;
+    height: 24px;
+  }
+}
+
+/* Phone responsive */
+@media (max-width: 576px) {
+  .footer-container {
+    grid-template-columns: 1fr;
+    gap: 25px;
+    padding: 0 20px;
+    text-align: center;
+  }
+
+  .footer-col h4,
+  .footer-col p {
+    font-size: 0.9rem;
+  }
+
+  .footer-logo {
+    font-size: 1.2rem;
+  }
+
+  .footer-col ul li a {
+    font-size: 0.85rem;
+  }
+
+  .social-icons {
+    justify-content: center;
+  }
+
+  .social-icons a img {
+    width: 28px;
+    height: 28px;
+  }
+}
+
+@media (max-width: 576px) {
+  .footer-col {
+    border-top: 1px solid var(--text);
+    padding-top: 15px;
+  }
+
+  /* ยกเว้นคอลัมน์แรก ไม่ต้องมีเส้น */
+  .footer-col:first-child {
+    border-top: none;
+    padding-top: 0;
+  }
+}

@@ -163,3 +163,72 @@
   font-weight: 600;
   transform: scale(1.25);
 }
+
+/*Phone Responsive*/
+@media (max-width: 576px) {
+  .pr-grid {
+    grid-template-columns: 1fr;
+    gap: 20px;
+    padding: 0 20px;
+  }
+
+  .pr-card {
+    max-width: 100%;
+    width: 100%;
+  }
+
+  .pr-card h3 {
+    font-size: 0.95rem;
+  }
+
+  .pr-img {
+    height: 260px;
+  }
+
+  .tag {
+    font-size: 0.9rem;
+    padding: 6px 14px;
+    border-radius: 25px;
+  }
+
+  .fav-btn {
+    width: 44px;
+    height: 44px;
+    font-size: 20px;
+  }
+
+  .buy-btn {
+    padding: 10px 24px;
+    font-size: 1rem;
+    border-radius: 25px;
+  }
+
+  .category {
+    font-size: 0.75rem;
+  }
+
+  .des {
+    font-size: 0.8rem;
+  }
+
+  .price {
+    font-size: 0.9rem;
+  }
+}
+
+/*Tablet Responsive*/
+@media (min-width: 577px) and (max-width: 992px) {
+  .pr-grid {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 20px;
+    padding: 0 30px;
+  }
+
+  .pr-card {
+    max-width: 100%;
+  }
+
+  .pr-img {
+    height: 300px;
+  }
+}
