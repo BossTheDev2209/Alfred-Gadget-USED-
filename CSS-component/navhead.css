@@ -187,18 +187,20 @@ header.navbar {
   .navbar-top{
     flex-direction: column;
     align-items: center;
+    gap: 10px;
   }
 
   .navbar-logo img{
-    width: 90px;
-    height: 90px;
+    width: 80px;
+    height: 80px;
+    margin-bottom: 5px;
     transform: translate(0);
   }
 
   .navbar-search{
-    width: 100%;
-    max-width: 100%;
-    margin-top: 10px;
+    width: 80%;
+    max-width: 400px;
+    justify-content: center;
   }
 
   .navbar-menu{
@@ -213,9 +215,9 @@ header.navbar {
 
   .navbar-icons{
     gap: 15px;
-    margin-top: 10px;
+    margin: 10px 0;
     padding-right: 0;
-    transform: none;
+    transform: translateY(0);
     justify-content: center;
   }
 
