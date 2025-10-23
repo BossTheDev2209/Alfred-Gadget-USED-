@@ -1,14 +1,15 @@
-.hamburger{
-    display: none;
-    flex-direction: column;
-    justify-content: space-between;
-    width: 24px;
-    height: 18px;
-    cursor: pointer;
+/* ===  HAMBURGER === */
+.hamburger {
+  display: none;
+  flex-direction: column;
+  justify-content: space-between;
+  width: 24px;
+  height: 18px;
+  cursor: pointer;
 }
 
-.hamburger span{
-    display: block;
+.hamburger span {
+  display: block;
   height: 3px;
   width: 100%;
   background-color: var(--text);
@@ -17,7 +18,7 @@
   transform-origin: center;
 }
 
-/*Mobile Menu*/
+/* ===  MOBILE MENU === */
 .mobile-menu {
   display: none;
   flex-direction: column;
@@ -31,33 +32,54 @@
   z-index: 99;
 }
 
-.mobile-menu a{
-    text-decoration: none;
-    color: var(--text);
-    padding: 10px 0;
-    border-bottom: 1px solid var(--border-color);
-    transition: color 0.3s ease;
+.mobile-menu a {
+  text-decoration: none;
+  color: var(--text);
+  padding: 10px 0;
+  border-bottom: 1px solid var(--border-color);
+  transition: color 0.3s ease;
 }
 
-.mobile-menu a:hover{
-    color: var(--primary);
+.mobile-menu a:hover {
+  color: var(--primary);
 }
 
-/*show menu*/
-.mobile-menu.show{
-    display: flex;
+.mobile-menu.show {
+  display: flex;
 }
 
-/* Responsive */
+/* ===  NAVBAR COLLAPSE (Reveal 2 ชั้น) === */
+.navbar.collapsed .navbar-center,
+.navbar.collapsed .navbar-icons img.icon,
+.navbar.collapsed .theme-toggle {
+  display: none;
+}
+
+.navbar.collapsed .hamburger {
+  display: flex;
+}
+
+/* ===  RESPONSIVE === */
 @media (max-width: 768px) {
   .navbar-menu {
     display: none;
   }
+
   .hamburger {
     display: flex;
     order: 2;
   }
+
   .navbar-search {
     width: 200px;
+  }
+
+  /* ป้องกันเมนูชนขอบ */
+  .mobile-menu {
+    padding: 15px;
+  }
+
+  .mobile-menu a {
+    font-size: 0.95rem;
   }
 }
