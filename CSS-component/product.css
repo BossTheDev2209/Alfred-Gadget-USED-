@@ -36,6 +36,15 @@
     transition: transform 0.2s ease, box-shadow 0.2s ease;
     transform-origin: center;
     max-width: 245px;
+
+    opacity: 0;
+    transform: translateY(10px);
+    transition: opacity 0.3s ease, transform 0.3s ease;
+}
+
+.pr-card.show {
+  opacity: 1;
+  transform: translateY(0);
 }
 
 .pr-card:hover{
@@ -232,3 +241,4 @@
     height: 300px;
   }
 }
+
