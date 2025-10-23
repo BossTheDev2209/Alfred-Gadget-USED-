@@ -20,7 +20,8 @@ header.navbar.shrink {
 }
 
 header.navbar.shrink .navbar-logo img {
-  width: 75px;               /* ย่อโลโก้ลง */
+  width: 80px;
+  height: 75px;             /* ย่อโลโก้ลง */
   transform: translateY(-4px);
 }
 
