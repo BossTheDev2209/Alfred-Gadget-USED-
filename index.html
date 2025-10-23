@@ -4,7 +4,10 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Browse All Product!</title>
+
     <link rel="stylesheet" href="CSS-component/theme.css">
+    <link rel="stylesheet" href="CSS-component/theme-ex.css">
+
     <link rel="stylesheet" href="CSS-component/navhead.css">
     <link rel="stylesheet" href="CSS-component/star.css">
     <link rel="stylesheet" href="CSS-component/product.css">
@@ -28,7 +31,7 @@
 <header class="navbar">
   <div class="navbar-top">
     <!-- Logo -->
-    <div class="navbar-logo">
+    <div class="navbar-logo" id="logo">
       <img src="Icon/Alfred Gadget.png" class="logo" alt="logo" width="115px" height="100px">
     </div>
 
@@ -36,8 +39,8 @@
     <div class="navbar-center">
       <div class="navbar-search">
         <input type="text" placeholder="Searching...">
-        <button>
-          <img src="Icon/search.png" alt="search">
+        <button class="click-logo">
+          <img src="Icon/search.png">
         </button>
       </div>
       <nav class="navbar-menu">
@@ -69,51 +72,6 @@
 <!------------------------ Product Grid Zone ------------------------->
 
 <section class="pr-grid">
-  <div class="pr-card">
-    <div class="pr-img">
-      <span class="tag">Shirt</span>
-      <img src="https://lee.co.th/cdn/shop/files/8859153090817__2_600x.jpg?v=1745563153" alt="Yellow Shirt">
-      <button class="fav-btn">♡</button>
-    </div>
-    <h3>Yellow Shirt</h3>
-    <p class="category">Cloth</p>
-    <p class="des">Lorem ipsum dolor sit amet consectetur adipisicing elit. Sequi, corrupti?</p>
-    <div class="card-bottom">
-      <span class="price">$999</span>
-      <button class="buy-btn">Buy</button>
-    </div>
-  </div>
-
-  <div class="pr-card">
-    <div class="pr-img">
-      <span class="tag">Shirt</span>
-      <img src="https://lee.co.th/cdn/shop/files/8859153090817__2_600x.jpg?v=1745563153" alt="Yellow Shirt">
-      <button class="fav-btn">♡</button>
-    </div>
-    <h3>Yellow Shirt</h3>
-    <p class="category">Cloth</p>
-    <p class="des">Lorem ipsum dolor sit amet consectetur adipisicing elit. Sequi, corrupti?</p>
-    <div class="card-bottom">
-      <span class="price">$999</span>
-      <button class="buy-btn">Buy</button>
-    </div>
-  </div>
-
-  <div class="pr-card">
-    <div class="pr-img">
-      <span class="tag">Shirt</span>
-      <img src="https://lee.co.th/cdn/shop/files/8859153090817__2_600x.jpg?v=1745563153" alt="Yellow Shirt">
-      <button class="fav-btn">♡</button>
-    </div>
-    <h3>Yellow Shirt</h3>
-    <p class="category">Cloth</p>
-    <p class="des">Lorem ipsum dolor sit amet consectetur adipisicing elit. Sequi, corrupti?</p>
-    <div class="card-bottom">
-      <span class="price">$999</span>
-      <button class="buy-btn">Buy</button>
-    </div>
-  </div>
-
   <div class="pr-card">
     <div class="pr-img">
       <span class="tag">Shirt</span>
@@ -233,19 +191,7 @@
   </div>
 </footer>
 
+  <script src="DarkMode.js"></script>
 
 </body>
-
-<script>
-    const themeToggle = document.getElementById('themeToggle');
-    let currentTheme = document.documentElement.getAttribute('data-theme');
-
-    themeToggle.addEventListener('click', () => {
-      const newTheme = currentTheme === 'light' ? 'dark' : 'light';
-      document.documentElement.setAttribute('data-theme', newTheme);
-      currentTheme = newTheme;
-      themeToggle.src = newTheme === 'dark' ? 'Icon/moon.png' : 'Icon/sun.png';
-    });
-  </script>
-  
 </html>

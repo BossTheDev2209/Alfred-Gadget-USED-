@@ -30,7 +30,7 @@
 .topbar-icon {
   width: 16px;
   height: 16px;
-  filter: brightness(0) invert(1) drop-shadow(0 0 2px var(--icon-glow));
+  filter: var(--icon-filter);
   opacity: 1;
 }
 
@@ -97,7 +97,7 @@ header.navbar {
   outline: none;
   padding: 8px;
   background: transparent;
-  color: var(--background);
+  color: var(--primary);
   font-size: 1rem;
 }
 
@@ -106,7 +106,7 @@ header.navbar {
 }
 
 .navbar-search button {
-  background-color: transparent;
+  background-color: var(--secondary);
   border: none;
   border-radius: 50%;
   width: 36px;
@@ -126,7 +126,7 @@ header.navbar {
   filter: brightness(0) invert(1);
 }
 
-/* Icons */
+/* 4 Icons */
 .navbar-icons {
   display: flex;
   gap: 25px;
@@ -139,10 +139,20 @@ header.navbar {
   width: 26px;
   transition: transform 0.2s ease;
   cursor: pointer;
+
+  filter: var(--icon-filter);
 }
 
 .navbar-icons .icon:hover {
   transform: scale(1.15);
+}
+
+.theme-toggle{
+  width: 26px;
+  transition: transform 0.2s ease;
+  cursor: pointer;
+
+  filter: var(--icon-filter);
 }
 
 /* Navigation Menu */
@@ -163,5 +173,4 @@ header.navbar {
 
 .navbar-menu a:hover {
   color: var(--primary);
-  text-shadow: 0 0 8px var(--shadow-color);
 }
