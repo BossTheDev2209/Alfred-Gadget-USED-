@@ -8,7 +8,7 @@
     margin-bottom: 8px;
 }
 .browse p{
-    color: #777;
+    color: var(--subtext);
     font-size: 1rem;
     margin-bottom: 30px;
 }
@@ -27,11 +27,11 @@
 .pr-card{
     display: flex;
     flex-direction: column;
-    background-color: #fff;
-    border: 1px solid #e0e0e0;
+    background-color: var(--background);
+    border: 1px solid var(--border-color);
     border-radius: 10px;
     padding: 12px;
-    box-shadow: 0 2px 8px rgba(0,0,0,0.05);
+    box-shadow: 0 2px 8px var(--shadow-color);
     cursor: pointer;
     transition: transform 0.2s ease, box-shadow 0.2s ease;
     transform-origin: center;
@@ -51,7 +51,7 @@
     border-radius: 8px;
     border-radius: 8px;
     overflow: hidden;
-    background-color: #f5f5f5;
+    background-color: var(--background);
 }
 .pr-img img{
     transition: transform 0.3s ease;
@@ -74,7 +74,7 @@
     position: absolute;
     top: 10px;
     right: 10px;
-    background: rgba(63, 63, 63, 0.9);
+    background: var(--invertbg);
     border: none;
     border-radius: 50%;
     width: 36px;
@@ -97,19 +97,21 @@
     font-weight: 600;
     margin-top: 10px;
     margin-bottom: 3px;
-    color: #333;
+    color: var(--text);
 }
 /*Category*/
 .category{
     margin-top: 1px;
     font-size: 0.8rem;
-    columns: #777;
+    font-weight: 600;
+    columns: var(--subtext);
     margin-bottom: 3px;
 }
 /*Description*/
 .des{
     font-size: 0.85rem;
-    color: #555;
+    font-weight: 350;
+    color: var(--text);
     line-height: 1.4;
     margin-top: 5px;
     margin-bottom: 15px;
@@ -136,7 +138,7 @@
   top: 10px;
   left: 10px;
   background: #00ca7d;
-  color: #fff;
+  color: var(--background);
   padding: 4px 10px;
   border-radius: 20px;
   font-size: 0.8rem;
@@ -146,7 +148,7 @@
 
 .buy-btn {
   background: #00ca7d;
-  color: #fff;
+  color: var(--background);
   border: none;
   padding: 6px 16px;
   border-radius: 20px;
@@ -156,6 +158,8 @@
 }
 
 .buy-btn:hover {
-  background: #009b60;
+  background: #00ff9d;
+  color: var(--text);
+  font-weight: 600;
   transform: scale(1.25);
 }

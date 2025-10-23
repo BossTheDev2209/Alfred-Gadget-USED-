@@ -1,6 +1,5 @@
 .footer{
-    background: linear-gradient(to bottom, #0045cf, #000);
-    color: #e3ecef;
+    background: linear-gradient(to bottom, var(--secondary), var(--background));
     padding: 50px 60px 20px;
     margin-top: 50px;
     font-size: 0.9rem;
@@ -20,6 +19,7 @@
 }
 
 .footer-col p{
+    color: var(--background);
     margin-bottom: 15px;
     font-size: 1rem;
     font-weight: 600;
@@ -35,13 +35,13 @@
 }
 
 .footer-col ul li a{
-    color: #b3b2b2;
+    color: var(--background);
     text-decoration: none;
     transition: color 0.2s ease;
 }
 
 .footer-col ul li a:hover{
-    filter: brightness(0) invert(1) drop-shadow(0 0 2px rgba(255,255,255,0.7));
+    filter: brightness(0) invert(1) drop-shadow(0 0 2px var(--icon-glow));
     opacity: 1;
 }
 .footer-logo{
@@ -56,14 +56,14 @@
     transition: color 0.2s ease,transform 0.2s ease;
 }
 .social-icons a:hover{
-    filter: brightness(0) invert(1) drop-shadow(0 0 2px rgba(255,255,255,0.7));
+    filter: brightness(0) invert(1) drop-shadow(0 0 2px var(--icon-glow));
     opacity: 1;
     transform: scale(1.2);
 }
 .footer-bottom{
-    border-top: 1px solid #333;
+    border-top: 1px solid var(--text);
     padding-top: 15px;
     text-align: center;
-    color: #777;
+    color: var(--subtext);
     font-size: 0.85rem;
 }

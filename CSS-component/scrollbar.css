@@ -15,7 +15,7 @@ html {
 }
 
 ::-webkit-scrollbar-thumb {
-  background-color: rgba(0, 0, 0, 0.35);
+  background-color: var(--shadow-color);
   border-radius: 4px;
   opacity: 0;
   transition: opacity 0.3s ease;

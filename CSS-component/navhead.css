@@ -1,7 +1,6 @@
 .topbar {
   width: 100;
-  background-color: #212020;
-  color: #f2f1f1;
+  background-color: var(--invertbg);
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -19,29 +18,29 @@
 
 .topbar-info{
   text-decoration: none;
-  color: #d0d0d0;
+  color: var(--subtext);
   transition: color 0.3s ease;
   margin-right: 14px;
 }
 
 .topbar-info:hover{
-  color: #0055ff;
+  color: var(--primary);
 }
 
 .topbar-icon {
   width: 16px;
   height: 16px;
-  filter: brightness(0) invert(1) drop-shadow(0 0 2px rgba(255,255,255,0.7));
+  filter: brightness(0) invert(1) drop-shadow(0 0 2px var(--icon-glow));
   opacity: 1;
 }
 
 header.navbar {
-  background-color: #ffffff;
+  background-color: var(--background);
   padding: 15px 60px 0 60px;
   display: flex;
   flex-direction: column;
   gap: 8px;
-  box-shadow: 0 2px 8px rgba(0,0,0,0.15);
+  box-shadow: 0 2px 8px var(--shadow-color);
   position: relative;
   z-index: 10;
 }
@@ -49,10 +48,10 @@ header.navbar {
 .navbar-top {
   display: flex;
   justify-content: space-between;
-  align-items: flex-start; /* ✅ ปรับจาก center เป็น flex-start */
+  align-items: flex-start; /*  ปรับจาก center เป็น flex-start */
 }
 
-/* ✅ Center Container (Search + Menu) */
+/* Center Container (Search + Menu) */
 .navbar-center {
   display: flex;
   flex-direction: column;
@@ -72,7 +71,7 @@ header.navbar {
   width: 115px;
   display: block;
   margin: 0 auto;
-  filter: drop-shadow(0 4px 8px rgba(0,0,0,0.3));
+  filter: drop-shadow(0 4px 8px var(--shadow-color));
   transition: transform 0.2s ease;
   transform: translateY(-8px);
 }
@@ -85,7 +84,7 @@ header.navbar {
 .navbar-search {
   display: flex;
   align-items: center;
-  background: #202121;
+  background: var(--invertbg);
   border-radius: 30px;
   padding: 6px 10px;
   width: 600px;
@@ -98,12 +97,12 @@ header.navbar {
   outline: none;
   padding: 8px;
   background: transparent;
-  color: #f2f1f1;
+  color: var(--background);
   font-size: 1rem;
 }
 
 .navbar-search input::placeholder {
-  color: #aaa;
+  color: var(--subtext);
 }
 
 .navbar-search button {
@@ -119,7 +118,7 @@ header.navbar {
 }
 
 .navbar-search button:hover {
-  background-color: #013fb9;
+  background-color: var(--primary);
 }
 
 .navbar-search button img {
@@ -156,13 +155,13 @@ header.navbar {
 
 .navbar-menu a {
   text-decoration: none;
-  color: #202121;
+  color: var(--text);
   font-size: 1rem;
   font-weight: 500;
   transition: color 0.3s ease;
 }
 
 .navbar-menu a:hover {
-  color: #0055ff;
-  text-shadow: 0 0 8px rgba(0, 85, 255, 0.25);
+  color: var(--primary);
+  text-shadow: 0 0 8px var(--shadow-color);
 }
