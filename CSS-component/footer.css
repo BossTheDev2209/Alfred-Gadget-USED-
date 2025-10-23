@@ -131,7 +131,7 @@
     padding-top: 15px;
   }
 
-  /* ยกเว้นคอลัมน์แรก ไม่ต้องมีเส้น */
+  /* คอลัมน์แรก ไม่ต้องมีเส้น */
   .footer-col:first-child {
     border-top: none;
     padding-top: 0;

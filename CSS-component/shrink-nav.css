@@ -1,0 +1,70 @@
+/* 🌿 Navbar ปกติ */
+header.navbar {
+  position: sticky;
+  top: 0;
+  z-index: 999;
+  background-color: var(--background);
+  padding: 15px 60px 0 60px;
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  box-shadow: 0 2px 8px var(--shadow-color);
+  transition: all 0.3s ease;   /* ✨ smooth transition */
+  backdrop-filter: blur(10px);
+}
+
+/* 🧭 Navbar ตอนย่อ */
+header.navbar.shrink {
+  padding: 5px 40px 0 40px;   /* ลด padding */
+  gap: 4px;
+}
+
+header.navbar.shrink .navbar-logo img {
+  width: 75px;               /* ย่อโลโก้ลง */
+  transform: translateY(-4px);
+}
+
+header.navbar.shrink .navbar-search {
+  max-width: 400px;          /* ย่อกล่อง search */
+}
+
+header.navbar.shrink .navbar-menu a {
+  font-size: 0.9rem;         /* ย่อขนาดฟอนต์เมนู */
+}
+
+
+
+
+
+
+/* 🧭 Navbar ตอนย่อ — Mobile & Tablet */
+@media (max-width: 1024px) {
+  header.navbar.shrink {
+    padding: 5px 20px 0 20px;   /* ลด padding ด้านข้างให้บางลง */
+    gap: 4px;
+  }
+
+  header.navbar.shrink .navbar-logo img {
+    width: 60px; 
+    height: 60px;              /* ย่อโลโก้อีกนิด */
+    transform: translateY(-3px);
+  }
+
+  header.navbar.shrink .navbar-search {
+    max-width: 280px;          /* ย่อ search bar ให้เล็กลง */
+    padding: 4px 8px;
+  }
+
+  header.navbar.shrink .navbar-search input {
+    font-size: 0.85rem;        /* ตัวอักษรในกล่อง search เล็กลง */
+  }
+
+  header.navbar.shrink .navbar-menu a {
+    font-size: 0.8rem;         /* เมนูเล็กลงอีกนิด */
+  }
+
+  .navbar-icons .icon,
+  .theme-toggle {
+    width: 20px;               /* icon ด้านขวาเล็กลง */
+  }
+}
