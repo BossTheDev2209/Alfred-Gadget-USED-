@@ -1,28 +1,30 @@
-//ดึง fake api
+// 📦 ดึง fake API
 const productGrid = document.getElementById('productGrid');
 const searchInput = document.querySelector('.navbar-search input');
 
 let products = [];
 
-//url
+// 🌐 URL ของ Fake API
 const API_URL = 'https://fakestoreapi.com/products';
 
-async function fetchProducts(){
-    try{
-        const response = await fetch(API_URL);
-        const data = await response.json();
-        products = data;
-        renderProducts(products);
-    } catch(err){
-        console.error('โหลดข้อมูลไม่ได้ไรวะ :/', err);
-    }
+// 📥 ดึงข้อมูลจาก API
+async function fetchProducts() {
+  try {
+    const response = await fetch(API_URL);
+    const data = await response.json();
+    products = data;
+    renderProducts(products);
+  } catch (err) {
+    console.error('โหลดข้อมูลไม่ได้ไรวะ :/', err);
+  }
 }
 
-//RENDER CARD!!
-function renderProducts(items){
-    productGrid.innerHTML = ''; //Clearing
-    items.forEach(item => {
-        const card = document.createElement('div');
+// 🧱 สร้างการ์ดสินค้า
+function renderProducts(items) {
+  productGrid.innerHTML = ''; // เคลียร์ product เดิม
+
+  items.forEach((item, index) => {
+    const card = document.createElement('div');
     card.classList.add('pr-card');
     card.innerHTML = `
       <div class="pr-img">
@@ -38,23 +40,25 @@ function renderProducts(items){
         <button class="buy-btn">Buy</button>
       </div>
     `;
-    // class show หลัง render เพื่อให้เกิด animation
-        productGrid.appendChild(card);
-          requestAnimationFrame(() => {
-        card.classList.add('show');
-      });
-    });
+
+    productGrid.appendChild(card);
+
+    // 🪄 ใส่ class 'show' แบบ stagger
+    setTimeout(() => {
+      card.classList.add('show');
+    }, index * 100);
+  });
 }
 
-//Realtime search
+// 🔍 Realtime Search
 searchInput.addEventListener('input', (e) => {
   const query = e.target.value.toLowerCase();
-  const filtered = products.filter(item => 
+  const filtered = products.filter(item =>
     item.title.toLowerCase().includes(query) ||
     item.category.toLowerCase().includes(query)
   );
   renderProducts(filtered);
 });
 
-//โหลดสินค้าตอนเปิดเว็บ
+// 🚀 โหลดสินค้าทันทีตอนเปิดเว็บ
 fetchProducts();
