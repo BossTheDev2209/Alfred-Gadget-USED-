@@ -1,13 +1,13 @@
-// 📦 ดึง fake API
+//  ดึง fake API
 const productGrid = document.getElementById('productGrid');
 const searchInput = document.querySelector('.navbar-search input');
 
 let products = [];
 
-// 🌐 URL ของ Fake API
+
 const API_URL = 'https://fakestoreapi.com/products';
 
-// 📥 ดึงข้อมูลจาก API
+//  ดึงข้อมูลจาก API
 async function fetchProducts() {
   try {
     const response = await fetch(API_URL);
@@ -19,7 +19,7 @@ async function fetchProducts() {
   }
 }
 
-// 🧱 สร้างการ์ดสินค้า
+//  สร้างการ์ดสินค้า
 function renderProducts(items) {
   productGrid.innerHTML = ''; // เคลียร์ product เดิม
 
@@ -43,14 +43,14 @@ function renderProducts(items) {
 
     productGrid.appendChild(card);
 
-    // 🪄 ใส่ class 'show' แบบ stagger
+    //  ใส่ class 'show' แบบ stagger
     setTimeout(() => {
       card.classList.add('show');
     }, index * 100);
   });
 }
 
-// 🔍 Realtime Search
+//  Realtime Search
 searchInput.addEventListener('input', (e) => {
   const query = e.target.value.toLowerCase();
   const filtered = products.filter(item =>
@@ -60,5 +60,5 @@ searchInput.addEventListener('input', (e) => {
   renderProducts(filtered);
 });
 
-// 🚀 โหลดสินค้าทันทีตอนเปิดเว็บ
+//  โหลดสินค้าตอนเปิดเว็บ
 fetchProducts();
