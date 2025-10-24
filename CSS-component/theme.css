@@ -19,7 +19,7 @@
   --subtext: #7c7c7c;
   --background: #202121;
   --invertbg: #f2f1f1;
-  --lowest-bg: #2c2c2c;
+  --lowest-bg: hsl(0, 0%, 17%);
   --primary: #0055ff;
   --secondary: #013fb9;
   --accent: #032a5c;
