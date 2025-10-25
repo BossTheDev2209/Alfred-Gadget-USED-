@@ -3,9 +3,9 @@ const bottomPagination = document.getElementById('pagination-bottom');
 
 const itemsPerPage = 12;
 let currentPage = 1;
-let filteredItems = []; // ← เก็บสินค้าที่ถูก search
+let filteredItems = []; //  เก็บสินค้าที่ถูก search
 
-// 📥 Fetch Product
+//  Fetch Product
 async function fetchProducts() {
   try {
     const response = await fetch(API_URL);
@@ -19,7 +19,7 @@ async function fetchProducts() {
   }
 }
 
-// 🧱 Render สินค้าต่อหน้า
+//  Render สินค้าต่อหน้า
 function renderProducts() {
   productGrid.innerHTML = '';
   const startIndex = (currentPage - 1) * itemsPerPage;
@@ -48,7 +48,7 @@ function renderProducts() {
   });
 }
 
-// 📄 Render Pagination (ใช้ได้ทั้งบน/ล่าง)
+//  Render Pagination บน-ล่าง
 function renderPagination(totalItems) {
   const totalPages = Math.ceil(totalItems / itemsPerPage);
   topPagination.innerHTML = '';

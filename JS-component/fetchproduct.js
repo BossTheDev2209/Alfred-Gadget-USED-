@@ -7,7 +7,7 @@ let products = [];
 
 const API_URL = 'https://fakestoreapi.com/products';
 
-//  ดึงข้อมูลจาก API
+// error handling
 async function fetchProducts() {
   try {
     const response = await fetch(API_URL);
@@ -15,7 +15,7 @@ async function fetchProducts() {
     products = data;
     renderProducts(products);
   } catch (err) {
-    console.error('โหลดข้อมูลไม่ได้ไรวะ :/', err);
+    console.error('โหลดไม่ได้ไรวะ :/', err);
   }
 }
 
@@ -53,10 +53,7 @@ function renderProducts(items) {
 //  Realtime Search
 searchInput.addEventListener('input', (e) => {
   const query = e.target.value.toLowerCase();
-  const filtered = products.filter(item =>
-    item.title.toLowerCase().includes(query) ||
-    item.category.toLowerCase().includes(query)
-  );
+  const filtered = products.filter(item => item.title.toLowerCase().includes(query) || item.category.toLowerCase().includes(query));
   renderProducts(filtered);
 });
 
